@@ -1,0 +1,24 @@
+
+
+/* Add the keyframes for the continuous scroll animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly half the width of the duplicated content */
+  }
+}
+
+.marquee-container {
+  overflow: hidden; /* Ensures content outside the visible area is hidden */
+}
+
+.marquee-track {
+  animation: scroll 20s linear infinite; /* Adjust duration (20s) for desired speed */
+  display: flex;
+  /* flex-shrink-0 ensures the track doesn't shrink and maintains its full width */
+  flex-shrink: 0;
+  /* min-width: 200% ensures there's always enough content to scroll seamlessly */
+  min-width: 200%;
+}

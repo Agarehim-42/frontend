@@ -1,0 +1,70 @@
+/* Hide the checkbox but keep its functionality */
+#checkbox {
+  display: none;
+}
+
+/* Button styles for the theme switch */
+.switch {
+  position: relative;
+  width: fit-content;
+  /* padding: 1px 2px; */
+  background-color: var(--switch-bg-dark); /* Default dark background */
+  border-radius: 50px;
+  z-index: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease; /* Smooth transition for background color */
+}
+
+.switch svg path {
+  fill: white; /* Default icon color */
+}
+
+/* Hover effect for the button */
+.switch:hover {
+  /* background-color: rgb(60, 60, 60); Darker background when hovered */
+}
+
+/* Active effect for button click */
+.switch:active {
+  transform: scale(0.98); /* Slight shrink when clicked */
+}
+
+/* Mobile-specific styles */
+@media (min-width: 320px) and (max-width: 500px) {
+  /* Button styles for the theme switch */
+  .switch {
+    padding: 5px 10px;
+    border-radius: 50px;
+    z-index: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white; /* Default text color */
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease; /* Smooth transition for background color */
+    background-color: var(--switch-bg-mobile); /* Light or dark mode depending on the theme */
+  }
+
+  .switch svg path {
+    fill: white; 
+  }
+}
+
+/* Light mode background for mobile */
+body.light-mode .switch {
+  --switch-bg-mobile: gray; /* Black background in light mode */
+}
+
+/* Dark mode background for mobile */
+body.dark-mode .switch {
+  --switch-bg-mobile: var(--switch-bg-dark); /* Dark background for dark mode */
+}
