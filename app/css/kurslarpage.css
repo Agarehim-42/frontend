@@ -1,0 +1,17 @@
+:root {
+  --font-size: 16px;
+  --font-weight: 600;
+  --font-family: Menlo, Roboto Mono, monospace;
+}
+
+.benz {
+    font-family: var(--font-family);
+    /* font-size: var(--font-size); */
+    font-weight: var(--font-weight);
+    /* color: #0eacd4; */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: pulse 2s infinite;
+}
+
+

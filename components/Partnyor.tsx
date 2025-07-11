@@ -1,5 +1,7 @@
 "use client"
 
+import { motion } from "framer-motion"
+
 const Partnyor = () => {
   const images = [
     "adobe.png",
@@ -19,7 +21,43 @@ const Partnyor = () => {
       <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white dark:from-gray-900 to-transparent z-10" />
       <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white dark:from-gray-900 to-transparent z-10" />
 
+        <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-8"
+          >
+             <div className="flex flex-col items-center gap-3  mb-6">
+      {/* Sol xətt */}
+      <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
+      
+      {/* Yazı */}
+      <span className="text-[#0eacd4] text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
+        {"< PARTNYORLARIMIZ />"}
+      </span>
+      
+      {/* Sağ xətt */}
+      <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-l from-transparent to-[#0eacd4]" />
+    </div>
+          </motion.div>
+
+        
+
+        
+
+          {/* Digital Separator */}
+          <div className="flex justify-center items-center space-x-2">
+            <div className="w-8 h-0.5 bg-[#0eacd4] animate-pulse" />
+            <div className="w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-[#0eacd4] to-transparent" />
+            <div className="w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
+            <div className="w-8 h-0.5 bg-[#0eacd4] animate-pulse" />
+          </div>
+        </div>
       <div className="flex w-full marquee-container">
+     
+
         {/* Duplicate the content to create a seamless loop */}
         <div className="flex flex-shrink-0 marquee-track">
           {images.map((img, index) => (

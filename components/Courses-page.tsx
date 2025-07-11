@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-// import { Button } from "@/components/ui/button"
 import { CourseCard } from "@/components-using/course-card"
 import ApplyButton from "@/components-using/ApplyButton"
 
@@ -35,8 +34,7 @@ const allCourses: Course[] = [
     duration: "Müddət: 1 ay",
     image: "/images/sillabus/microsoft-power-point.png",
   },
-
-    {
+  {
     id: "4",
     category: "IT",
     title: "IT Helpdesk",
@@ -67,11 +65,10 @@ const allCourses: Course[] = [
   {
     id: "8",
     category: "Marketing",
-    title: "SMM Sosial Şəbəkələrdə Təşviqat",
+    title: "SMM Sosial Media Marketing",
     duration: "Müddət: 3 ay",
     image: "/images/sillabus/smm.svg",
   },
-
   {
     id: "10",
     category: "Marketing",
@@ -86,7 +83,6 @@ const allCourses: Course[] = [
     duration: "Müddət: 2 ay",
     image: "/images/sillabus/content-making.png",
   },
-
   {
     id: "13",
     category: "Marketing",
@@ -132,7 +128,7 @@ const allCourses: Course[] = [
   {
     id: "19",
     category: "Web Proqramlaşdırma",
-    title: "Javascript (Node.js) - (Backend) ",
+    title: "Node.js (Backend) ",
     duration: "Müddət: 3 ay",
     image: "/images/sillabus/fs.png",
   },
@@ -150,13 +146,13 @@ const allCourses: Course[] = [
     duration: "Müddət: 4 ay",
     image: "/images/sillabus/ui-ux.png",
   },
-];
-
+]
 
 const COURSES_PER_LOAD = 9
 
 export default function CoursesPage() {
   const [visibleCoursesCount, setVisibleCoursesCount] = useState(COURSES_PER_LOAD)
+  const [activeCategory, setActiveCategory] = useState<string | null>(null)
 
   const handleLoadMore = () => {
     setVisibleCoursesCount((prevCount) => prevCount + COURSES_PER_LOAD)
@@ -167,8 +163,8 @@ export default function CoursesPage() {
 
   const categories = [
     "Proqramlaşdırma",
-    "Ofis Proqraları",
-    "Web-Proqramlaşdırma",
+    "Ofis Proqramları",
+    "Web Proqramlaşdırma",
     "Dizayn",
     "Marketing",
     "Mobile Proqramlaşdırma",
@@ -177,43 +173,111 @@ export default function CoursesPage() {
   ]
 
   return (
-    <section className="container mx-auto px-4 py-16">
-      <h1 className="mb-8 text-center text-4xl font-bold dark:text-white text-gray-900">
-        <span className="text-[#2563eb]">MIT</span> Akademiyanın Tədris Sahələri 
-      </h1>
-
-      <div className="mb-8 flex flex-wrap justify-center gap-8">
-        {categories.map((category) => (
-          <ApplyButton
-            key={category}
-            text={category}
-            variant="outline"
-            className="rounded-full border border-gray-300 bg-white px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 data-[state=active]:bg-[#2563eb] data-[state=active]:text-white"
-          />
-        ))}
+    <section className="relative min-h-screen bg-[#F9FAFB] dark:bg-[#101828] overflow-hidden">
+      {/* Cyber Grid Background */}
+      <div className="absolute inset-0 opacity-5">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(14, 172, 212, 0.2) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(14, 172, 212, 0.2) 1px, transparent 1px)
+            `,
+            backgroundSize: "50px 50px",
+          }}
+        />
       </div>
 
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {displayedCourses.map((course) => (
-          <CourseCard
-            key={course.id}
-            category={course.category}
-            title={course.title}
-            duration={course.duration}
-            image={course.image}
-          />
-        ))}
-      </div>
+      {/* Floating Digital Particles */}
+      <div className="absolute top-20 left-10 w-2 h-2 bg-[#0eacd4] rounded-full animate-pulse" />
+      <div className="absolute top-40 right-20 w-1 h-1 bg-[#0eacd4] rounded-full animate-ping" />
+      <div className="absolute bottom-40 left-20 w-1.5 h-1.5 bg-[#0eacd4] rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
 
-      {hasMoreCourses && (
-        <div className="mt-10 flex justify-center">
-          <ApplyButton 
-            onClick={handleLoadMore}
-            text="Daha Çox"
-            className="rounded-full bg-[#2563eb] px-8 py-3 text-lg font-semibold text-white hover:bg-[#1e40af]"
-          />
+      <div className="relative container mx-auto px-4 py-16">
+        {/* Header Section */}
+        <div className="text-center mb-16">
+          <div className="inline-block mb-8">
+           <div className="flex items-center justify-center pb-[50px]  space-x-4 mb-6">
+              <div className="w-60 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
+              <span className="text-[#0eacd4] benz text-4xl tracking-[0.2em] animate-pulse">
+                {"< TƏDRİS SAHƏLƏRİ />"}
+              </span>
+              <div className="w-60 h-0.5 bg-gradient-to-l from-transparent to-[#0eacd4]" />
+            </div>
+          </div>
+
+       
+
+          {/* Digital Separator */}
+          <div className="flex justify-center items-center space-x-2 mb-8">
+            <div className="w-8 h-0.5 bg-[#0eacd4] animate-pulse" />
+            <div className="w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
+            <div className="w-16 h-0.5 bg-gradient-to-r from-[#0eacd4] to-transparent" />
+            <div className="w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
+            <div className="w-8 h-0.5 bg-[#0eacd4] animate-pulse" />
+          </div>
         </div>
-      )}
+
+        {/* Category Filter */}
+        <div className="mb-16">
+          <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
+            {categories.map((category, index) => (
+              <ApplyButton
+                key={category}
+                text={`[${String(index + 1).padStart(2, "0")}] ${category}`}
+                onClick={() => setActiveCategory(activeCategory === category ? null : category)}
+                variant={activeCategory === category ? "primary" : "outline"}
+                className="font-mono text-sm tracking-wider"
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Courses Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {displayedCourses.map((course, index) => (
+            <div
+              key={course.id}
+              className="animate-fade-in-up"
+              style={{
+                animationDelay: `${index * 100}ms`,
+                animationFillMode: "both",
+              }}
+            >
+              <CourseCard
+                category={course.category}
+                title={course.title}
+                duration={course.duration}
+                image={course.image} id={0} index={0}              />
+            </div>
+          ))}
+        </div>
+
+        {/* Load More Button */}
+        {hasMoreCourses && (
+          <div className="mb-12 flex justify-center">
+  <ApplyButton
+    onClick={handleLoadMore}
+    text="[LOAD_MORE_DATA]"
+    variant="primary"
+    className="px-12 py-4 text-lg font-mono tracking-wider"
+  />
+</div>
+
+        )}
+
+        {/* Bottom Terminal Style */}
+        <div className="text-center">
+          <div className="inline-block bg-slate-900/50 border border-[#0eacd4]/30 rounded-lg p-4 font-mono text-sm">
+            <div className="flex items-center justify-center space-x-4 text-[#0eacd4]/70">
+              <span>{">"}</span>
+              <span className="animate-pulse">SYSTEM_STATUS: ONLINE</span>
+              <span>{"<"}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   )
 }

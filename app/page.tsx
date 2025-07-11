@@ -17,6 +17,9 @@ import MitAcademyFeatures from "@/components/Advantages";
 import "@/app/css/maintext.css"
 import StatisticsSection from "@/components/Statistika";
 import GraduatesSection from "@/components/GraduatesSection";
+import HeroSection2 from "@/components/HeroSection2";
+import "./css/kurslarpage.css"
+import "./css/advantages.css"
 
 // import Auye from "@/components/Herocopy";
 
@@ -28,6 +31,7 @@ import GraduatesSection from "@/components/GraduatesSection";
 const Home = () => {
   return (
     <section className="">
+      <HeroSection2/>
     <HeroSection/>
     {/* <Subject1/> */}
     <CoursesPage/>

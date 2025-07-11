@@ -21,6 +21,7 @@ import "./css/navbar1.css" // Header üçün stil faylını import edirik
 // import Guraba from '@/components/Guraba';
 // import '../components/tedris-Dropdown';  // Header üçün stil faylını import edirik
 import type { Metadata } from "next"
+import Header2 from "@/components/Header2"
 
 // export const metadata: Metadata = {
 //   title: "v0 App",
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
              
               {/* Container komponenti ətrafında */}
               <Header onContentVisibilityChange={handleHeaderContentVisibilityChange} />{" "}
+              <Header2 onContentVisibilityChange={handleHeaderContentVisibilityChange} /> {/* Header'a callback prop'unu geçirin */}
               {/* Header'a callback prop'unu geçirin */}
               {/* <Guraba/> */}
               {/* <Akademiya/> */}
