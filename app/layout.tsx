@@ -59,7 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
              
               {/* Container komponenti ətrafında */}
               <Header onContentVisibilityChange={handleHeaderContentVisibilityChange} />{" "}
-              <Header2 onContentVisibilityChange={handleHeaderContentVisibilityChange} /> {/* Header'a callback prop'unu geçirin */}
+              {/* <Header2 onContentVisibilityChange={handleHeaderContentVisibilityChange} /> Header'a callback prop'unu geçirin */}
               {/* Header'a callback prop'unu geçirin */}
               {/* <Guraba/> */}
               {/* <Akademiya/> */}

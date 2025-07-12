@@ -215,7 +215,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
       {/* ============================================ */}
       {showPageContent && (
         <nav
-          className={`my-5 border-2 rounded-xl px-4 lg:px-8 transition-all duration-500 ease-in-out backdrop-blur-sm font-mono ${
+          className={`my-5 border-2 rounded-xl px-4 lg:px-8 transition-all duration-500 ease-in-out font-mono ${
             theme === "light"
               ? "bg-white/90 border-[#0eacd4]/30 shadow-lg shadow-[#0eacd4]/10"
               : "bg-slate-900/90 border-[#0eacd4]/30 shadow-lg shadow-[#0eacd4]/20"
@@ -310,7 +310,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                   {/* Tədris dropdown backdrop */}
                   {isTedrisOpen && (
                     <motion.div
-                      className="fixed inset-0 z-[9997] bg-black/20 backdrop-blur-sm"
+                      className="fixed inset-0 z-[9997] bg-black/20 "
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -349,7 +349,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                     {/* Mobile Menu Header - renkler iyileştirildi */}
                     <motion.div
                       className={`p-6 border-b-2 border-[#0eacd4]/30 transition-colors duration-500 relative ${
-                        theme === "light" ? "bg-gray-50/90 backdrop-blur-sm" : "bg-slate-800/80 backdrop-blur-sm"
+                        theme === "light" ? "bg-gray-50/90 " : "bg-slate-800/80"
                       }`}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -367,7 +367,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                     </motion.div>
 
                     {/* Mobile Menu Navigation */}
-                    <motion.nav className="p-6" variants={containerVariants} initial="hidden" animate="visible">
+                    <motion.nav className="p-6 " variants={containerVariants} initial="hidden" animate="visible">
                       <ul className="space-y-3">
                         {/* Ana Səhifə - renkler düzeltildi */}
                         <motion.li variants={itemVariants}>
@@ -439,7 +439,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                       {/* Dark Mode Toggle - renkler iyileştirildi */}
                       <motion.div
                         className={`mt-8 pt-6 border-t-2 border-[#0eacd4]/30 transition-colors duration-500 rounded-lg p-4 ${
-                          theme === "light" ? "bg-gray-100/80 backdrop-blur-sm" : "bg-slate-800/60 backdrop-blur-sm"
+                          theme === "light" ? "bg-gray-100/80 " : "bg-slate-800/60"
                         }`}
                         variants={itemVariants}
                       >
@@ -563,7 +563,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
           >
             <div className="relative max-w-screen-xl mx-auto">
               <motion.div
-                className={`grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 py-10 px-4 rounded-xl lg:px-8 border-2 shadow-2xl backdrop-blur-sm transition-all duration-500 ${
+                className={`grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 py-10 px-4 rounded-xl lg:px-8 border-2 shadow-2xl transition-all duration-500 ${
                   theme === "light"
                     ? "bg-white/90 border-[#0eacd4]/30 shadow-[#0eacd4]/10"
                     : "bg-slate-900/90 border-[#0eacd4]/30 shadow-[#0eacd4]/20"
@@ -798,7 +798,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
           >
             <div className="relative max-w-screen-xl mx-auto">
               <motion.div
-                className={`grid grid-cols-5 mt-6 py-8 px-6 rounded-xl lg:px-8 border-2 shadow-2xl backdrop-blur-sm transition-all duration-500 font-mono ${
+                className={`grid grid-cols-5 mt-6 py-8 px-6 rounded-xl lg:px-8 border-2 shadow-2xl  transition-all duration-500 font-mono ${
                   theme === "light"
                     ? "bg-white/90 border-[#0eacd4]/30 shadow-[#0eacd4]/10"
                     : "bg-slate-900/90 border-[#0eacd4]/30 shadow-[#0eacd4]/20"
