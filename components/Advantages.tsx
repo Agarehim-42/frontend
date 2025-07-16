@@ -67,7 +67,7 @@ export default function MitAcademyFeatures() {
       <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
       
       {/* Yazı */}
-      <span className="text-[#0eacd4] text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
+      <span className="text-[#0eacd4] font-semibold text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
         {"< ÜSTÜNLÜKLƏRİMİZ />"}
       </span>
       
@@ -103,7 +103,7 @@ export default function MitAcademyFeatures() {
               className="group relative"
             >
               {/* Feature Card with Cyber Design */}
-              <div className="relative bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 rounded-xl p-8 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden">
+              <div className="relative dark:bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 rounded-xl p-8 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden">
                 {/* Card Number */}
                 <div className="absolute top-4 right-4 w-8 h-8 bg-[#0eacd4]/10 border border-[#0eacd4]/30 rounded-full flex items-center justify-center">
                   <span className="text-[#0eacd4] font-mono text-xs font-bold">
@@ -127,7 +127,7 @@ export default function MitAcademyFeatures() {
 
                 {/* Icon Container */}
                 <div className="relative mb-6">
-                  <div className="w-16 h-16 mx-auto bg-slate-800/50 border-2 border-[#0eacd4]/30 rounded-lg flex items-center justify-center group-hover:border-[#0eacd4] transition-colors duration-300">
+                  <div className="w-16 h-16 mx-auto border-2 border-[#0eacd4]/30 rounded-lg flex items-center justify-center group-hover:border-[#0eacd4] transition-colors duration-300">
                     <div className="text-[#0eacd4] group-hover:scale-110 transition-transform duration-300">
                       {feature.icon}
                     </div>
@@ -149,12 +149,12 @@ export default function MitAcademyFeatures() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-4 font-mono group-hover:text-[#0eacd4] transition-colors duration-300">
+                <h3 className="text-xl font-bold dark:text-white text-[#0eacd4]  mb-4 font-mono dark:group-hover:text-[#0eacd4] group-hover:text-[#0eacd4] transition-colors duration-300">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-slate-400 font-mono leading-relaxed">{feature.description}</p>
+                <p className="text-sm dark:text-slate-400  font-mono leading-relaxed">{feature.description}</p>
 
                 {/* Hover Scan Line Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#0eacd4]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />

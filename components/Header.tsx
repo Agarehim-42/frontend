@@ -215,11 +215,15 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
       {/* ============================================ */}
       {showPageContent && (
         <nav
-          className={`my-5 border-2 rounded-xl px-4 lg:px-8 transition-all duration-500 ease-in-out font-mono ${
-            theme === "light"
-              ? "bg-white/90 border-[#0eacd4]/30 shadow-lg shadow-[#0eacd4]/10"
-              : "bg-slate-900/90 border-[#0eacd4]/30 shadow-lg shadow-[#0eacd4]/20"
-          }`}
+          className="my-5 border-2 rounded-xl px-4 lg:px-8 transition-all duration-500 ease-in-out font-mono 
+    bg-white border-[#0eacd4]/30 shadow-[#0eacd4]/10
+    dark:bg-slate-900 dark:border-[#0eacd4]/30 shadow-lg dark:shadow-[#0eacd4]/20
+     hover:shadow-2xl 
+    hover:shadow-[#0eacd4]/30 dark:hover:shadow-[#0eacd4]/40
+    hover:border-[#0eacd4]/60 dark:hover:border-[#0eacd4]/70
+    t
+    cyber-header-glow top-0 left-0 z-999999999999999999999
+  "
         >
           {/* ============================================ */}
           {/* MOBİL HEADER BÖLÜMÜ (lg:hidden) */}
@@ -310,7 +314,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                   {/* Tədris dropdown backdrop */}
                   {isTedrisOpen && (
                     <motion.div
-                      className="fixed inset-0 z-[9997] bg-black/20 "
+                      className="fixed inset-0 z-[9997] bg-black/20 backdrop-blur-sm"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -349,7 +353,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                     {/* Mobile Menu Header - renkler iyileştirildi */}
                     <motion.div
                       className={`p-6 border-b-2 border-[#0eacd4]/30 transition-colors duration-500 relative ${
-                        theme === "light" ? "bg-gray-50/90 " : "bg-slate-800/80"
+                        theme === "light" ? "bg-gray-50/90 backdrop-blur-sm" : "bg-slate-800/80 backdrop-blur-sm"
                       }`}
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -367,7 +371,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                     </motion.div>
 
                     {/* Mobile Menu Navigation */}
-                    <motion.nav className="p-6 " variants={containerVariants} initial="hidden" animate="visible">
+                    <motion.nav className="p-6" variants={containerVariants} initial="hidden" animate="visible">
                       <ul className="space-y-3">
                         {/* Ana Səhifə - renkler düzeltildi */}
                         <motion.li variants={itemVariants}>
@@ -439,7 +443,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                       {/* Dark Mode Toggle - renkler iyileştirildi */}
                       <motion.div
                         className={`mt-8 pt-6 border-t-2 border-[#0eacd4]/30 transition-colors duration-500 rounded-lg p-4 ${
-                          theme === "light" ? "bg-gray-100/80 " : "bg-slate-800/60"
+                          theme === "light" ? "bg-gray-100/80 backdrop-blur-sm" : "bg-slate-800/60 backdrop-blur-sm"
                         }`}
                         variants={itemVariants}
                       >
@@ -473,9 +477,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                 <li>
                   <motion.button
                     onClick={toggleAkademiyaMenu}
-                    className={`flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden ${
-                      theme === "light" ? "text-slate-800 hover:bg-[#0eacd4]/5" : "text-white hover:bg-[#0eacd4]/10"
-                    }`}
+                       className="flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden text-slate-800 hover:bg-[#0eacd4]/5  dark:text-white dark:hover:bg-[#0eacd4]/10"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -490,9 +492,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                 <li>
                   <motion.button
                     onClick={toggleTedrisMenu}
-                    className={`flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden ${
-                      theme === "light" ? "text-slate-800 hover:bg-[#0eacd4]/5" : "text-white hover:bg-[#0eacd4]/10"
-                    }`}
+                       className="flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden text-slate-800 hover:bg-[#0eacd4]/5  dark:text-white dark:hover:bg-[#0eacd4]/10"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -507,9 +507,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                 <li>
                   <motion.a
                     href="#"
-                    className={`block py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden ${
-                      theme === "light" ? "text-slate-800 hover:bg-[#0eacd4]/5" : "text-white hover:bg-[#0eacd4]/10"
-                    }`}
+                      className="flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden text-slate-800 hover:bg-[#0eacd4]/5  dark:text-white dark:hover:bg-[#0eacd4]/10"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -524,9 +522,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
                 <li>
                   <motion.a
                     href="/contact"
-                    className={`block py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden ${
-                      theme === "light" ? "text-slate-800 hover:bg-[#0eacd4]/5" : "text-white hover:bg-[#0eacd4]/10"
-                    }`}
+                      className="flex items-center justify-between py-3 px-4 rounded-lg transition-all duration-300 border border-transparent hover:border-[#0eacd4]/30 relative overflow-hidden text-slate-800 hover:bg-[#0eacd4]/5  dark:text-white dark:hover:bg-[#0eacd4]/10"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -563,7 +559,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
           >
             <div className="relative max-w-screen-xl mx-auto">
               <motion.div
-                className={`grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 py-10 px-4 rounded-xl lg:px-8 border-2 shadow-2xl transition-all duration-500 ${
+                className={`grid grid-cols-2 md:grid-cols-4 gap-6 mt-6 py-10 px-4 rounded-xl lg:px-8 border-2 shadow-2xl backdrop-blur-sm transition-all duration-500 ${
                   theme === "light"
                     ? "bg-white/90 border-[#0eacd4]/30 shadow-[#0eacd4]/10"
                     : "bg-slate-900/90 border-[#0eacd4]/30 shadow-[#0eacd4]/20"
@@ -798,7 +794,7 @@ const Header: React.FC<HeaderProps> = ({ onContentVisibilityChange }) => {
           >
             <div className="relative max-w-screen-xl mx-auto">
               <motion.div
-                className={`grid grid-cols-5 mt-6 py-8 px-6 rounded-xl lg:px-8 border-2 shadow-2xl  transition-all duration-500 font-mono ${
+                className={`grid grid-cols-5 mt-6 py-8 px-6 rounded-xl lg:px-8 border-2 shadow-2xl backdrop-blur-sm transition-all duration-500 font-mono ${
                   theme === "light"
                     ? "bg-white/90 border-[#0eacd4]/30 shadow-[#0eacd4]/10"
                     : "bg-slate-900/90 border-[#0eacd4]/30 shadow-[#0eacd4]/20"

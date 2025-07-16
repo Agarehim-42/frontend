@@ -33,7 +33,7 @@ const Partnyor = () => {
       <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
       
       {/* Yazı */}
-      <span className="text-[#0eacd4] text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
+      <span className="text-[#0eacd4] font-mono font-semibold text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse text-center">
         {"< PARTNYORLARIMIZ />"}
       </span>
       

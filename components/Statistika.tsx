@@ -82,7 +82,7 @@ const StatisticsSection: React.FC = () => {
       <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
       
       {/* Yazı */}
-      <span className="text-[#0eacd4] text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
+      <span className="text-[#0eacd4] text-2xl font-semibold sm:text-3xl md:text-4xl tracking-wide animate-pulse font-mono text-center">
         {"< STATİSTİKA />"}
       </span>
       
@@ -123,20 +123,12 @@ const StatisticsSection: React.FC = () => {
               {/* Feature Card with Cyber Design */}
               {/* <div className=""> */}
 <div
-  className="bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 p-8 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden rounded-lg font-mono text-sm relative"
-  style={{
-    backgroundImage: `
-      linear-gradient(rgba(14, 172, 212, 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(14, 172, 212, 0.1) 1px, transparent 1px)
-    `,
-    backgroundSize: "20px 20px",
-    backgroundRepeat: "repeat",
-    // opacity: 0.3, // əgər istəsən
-  }}
+  className="dark:bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 p-8 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden rounded-lg font-mono text-sm relative"
+
 >
   <div className="flex items-start space-x-2">
     <span className="text-[#0eacd4] mt-1">{">"}</span>
-    <p className="text-slate-300 leading-relaxed z-10 relative">
+    <p className="dark:text-slate-300  leading-relaxed z-10 relative">
       Təcrübəli mütəxəssislərlə birlikdə, real nəticələrə fokuslanan bir təhsil mühiti yaratdıq — indi isə
       uğur növbəsi sizdədir.
     </p>
@@ -160,7 +152,7 @@ const StatisticsSection: React.FC = () => {
             
 
             {/* Image Container with Cyber Frame */}
-            <div className="relative group bg-[#0f192d] rounded-xl">
+            <div className="relative group dark:bg-[#0f192d] rounded-xl">
                 <motion.div
               // key={index}
               initial={{ opacity: 0, scale: 0.8, y: 50 }}
@@ -173,16 +165,10 @@ const StatisticsSection: React.FC = () => {
                <div className="absolute inset-0 opacity-30 group-hover:opacity-60 transition-opacity">
           <div
             className="absolute inset-0"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(14, 172, 212, 0.3) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(14, 172, 212, 0.3) 1px, transparent 1px)
-              `,
-              backgroundSize: "20px 20px",
-            }}
+           
           />
         </div>
-              <div className="relative bg-slate-800/50 border-2 border-[#0eacd4]/30 rounded-xl p-4 group-hover:border-[#0eacd4] transition-colors duration-300">
+              <div className="relative dark:bg-slate-800/50 border-2 rounded-xl p-4 group-hover:border-[#0eacd4] transition-colors duration-300">
                 <img
                   src="/images/statistika/statistika.png"
                   alt="Statistika"
@@ -222,7 +208,7 @@ const StatisticsSection: React.FC = () => {
                   className="group relative"
                 >
                   {/* Stat Card with Cyber Design */}
-                  <div className="relative bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 rounded-xl p-6 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden">
+                  <div className="relative dark:bg-[#0f192d] backdrop-blur-sm border-2 border-slate-700 rounded-xl p-6 h-full transition-all duration-300 hover:border-[#0eacd4] hover:shadow-xl hover:shadow-[#0eacd4]/20 overflow-hidden">
                   
                     {/* Card Number */}
                     <div className="absolute top-3 right-3 w-6 h-6 bg-[#0eacd4]/10 border border-[#0eacd4]/30 rounded-full flex items-center justify-center">
@@ -234,13 +220,7 @@ const StatisticsSection: React.FC = () => {
                     <div className="absolute inset-0 opacity-30 group-hover:opacity-60 transition-opacity">
                       <div
                         className="absolute inset-0"
-                        style={{
-                          backgroundImage: `
-                            linear-gradient(rgba(14, 172, 212, 0.3) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(14, 172, 212, 0.3) 1px, transparent 1px)
-                          `,
-                          backgroundSize: "15px 15px",
-                        }}
+                      
                       />
                     </div>
 
@@ -255,14 +235,14 @@ const StatisticsSection: React.FC = () => {
 
                     {/* Number Display */}
                     <div className="mb-4">
-                      <div className="text-4xl md:text-5xl font-bold font-mono  text-[#0eacd4] group-hover:text-white transition-colors duration-300">
+                      <div className="text-4xl md:text-5xl font-bold font-mono  text-[#0eacd4] transition-colors duration-300">
                         <CountUp end={number} duration={3} separator="," />
                         {unit && <span className="text-2xl">{unit}</span>}
                       </div>
                     </div>
 
                     {/* Label */}
-                    <div className="text-sm text-slate-400 font-mono leading-relaxed uppercase tracking-wider">
+                    <div className="text-sm dark:text-slate-400 font-mono leading-relaxed uppercase tracking-wider">
                       {label}
                     </div>
 

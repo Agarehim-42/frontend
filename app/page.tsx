@@ -32,7 +32,7 @@ const Home = () => {
   return (
     <section className="">
       <HeroSection2/>
-    <HeroSection/>
+    {/* <HeroSection/> */}
     {/* <Subject1/> */}
     <CoursesPage/>
     <Partnyor/>

@@ -26,7 +26,7 @@ const HeroSection2: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className=''>
       
       
      

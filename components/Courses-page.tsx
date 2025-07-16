@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { CourseCard } from "@/components-using/course-card"
 import ApplyButton from "@/components-using/ApplyButton"
+import { motion } from "framer-motion"
 
 interface Course {
   id: string
@@ -196,21 +197,33 @@ export default function CoursesPage() {
 
       <div className="relative container mx-auto px-4 py-16">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block mb-8">
-           <div className="flex items-center justify-center pb-[50px]  space-x-4 mb-6">
-              <div className="w-60 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
-              <span className="text-[#0eacd4] benz text-4xl tracking-[0.2em] animate-pulse">
-                {"< TƏDRİS SAHƏLƏRİ />"}
-              </span>
-              <div className="w-60 h-0.5 bg-gradient-to-l from-transparent to-[#0eacd4]" />
-            </div>
-          </div>
+      <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-8"
+          >
+             <div className="flex flex-col items-center gap-3  mb-6">
+      {/* Sol xətt */}
+      <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-r from-transparent to-[#0eacd4]" />
+      
+      {/* Yazı */}
+      <span className="text-[#0eacd4] font-mono font-semibold text-2xl sm:text-3xl md:text-4xl tracking-wide animate-pulse text-center">
+        {"< TƏDRİS SAHƏLƏRİ />"}
+      </span>
+      
+      {/* Sağ xətt */}
+      <div className="w-24 sm:w-40 h-0.5 bg-gradient-to-l from-transparent to-[#0eacd4]" />
+    </div>
+          </motion.div>
 
-       
+        
+
+        
 
           {/* Digital Separator */}
-          <div className="flex justify-center items-center space-x-2 mb-8">
+          <div className="flex justify-center items-center space-x-2">
             <div className="w-8 h-0.5 bg-[#0eacd4] animate-pulse" />
             <div className="w-2 h-2 bg-[#0eacd4] rounded-full animate-ping" />
             <div className="w-16 h-0.5 bg-gradient-to-r from-[#0eacd4] to-transparent" />

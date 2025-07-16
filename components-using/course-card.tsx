@@ -23,7 +23,7 @@ export function CourseCard({ id, index, category, title, duration, image }: Cour
       className="group relative z-0 hover:z-10"
     >
       <div
-        className="coursecard justify-center relative overflow-hidden rounded-lg bg-slate-900 border-2 border-slate-700 p-6 text-white shadow-lg transition-all duration-300 
+        className="coursecard justify-center relative overflow-hidden rounded-lg dark:bg-slate-900 border-2 border-slate-700 p-6 text-white shadow-lg transition-all duration-300 
         hover:border-[#0eacd4] hover:shadow-[0px_0px_20px_0px_rgba(14,172,212,0.3)] group
         w-full md:max-w-[332px] lg:max-w-[340px] xl:max-w-[400px]
         h-[300px] md:h-[300px] lg:h-[300px]
@@ -55,7 +55,7 @@ export function CourseCard({ id, index, category, title, duration, image }: Cour
             </span>
 
             {/* Title */}
-            <h3 className="mb-3 text-xl font-bold leading-tight font-mono group-hover:text-[#0eacd4] transition-colors duration-300 relative line-clamp-2">
+            <h3 className="mb-3 text-xl font-bold leading-tight font-mono text-[#0eacd4] transition-colors duration-300 relative line-clamp-2">
               <span className="coursecard-title">{title}</span>
             </h3>
 

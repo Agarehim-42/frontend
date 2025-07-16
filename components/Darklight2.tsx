@@ -7,7 +7,7 @@ const Darklight2: React.FC = () => {
 
   // Toggle theme when the checkbox is clicked
   const handleToggleChange = () => {
-    const newTheme = isChecked ? "light" : "dark"; // Toggle between light and dark
+    const newTheme = isChecked ? "dark" : "light"; // Toggle between light and dark
     setTheme(newTheme); // Update theme
     setIsChecked(!isChecked); // Toggle the checkbox state
   };
